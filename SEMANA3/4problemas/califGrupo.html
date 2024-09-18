@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio de Calificaciones</title>
+</head>
+
+
+<!-- Desarrolla un programa que reciba como entrada las calificaciones de un grupo de estudiantes en una materia específica. 
+ El programa debe calcular y mostrar el promedio de calificaciones, la calificación más alta y la calificación más baja del grupo.-->
+
+<body> 
+
+    <h2>Promedio, Calificación más alta y Calificación más baja</h2>
+    <input type="text" id="calificaciones" placeholder="Ingresa las calificaciones separadas por comas">
+    <button onclick="calcularCalif()">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularCalif() {
+            let calificaciones = document.getElementById('calificaciones').value.split(',').map(Number);
+            let suma = calificaciones.reduce((a, b) => a + b, 0);
+            let promedio = suma / calificaciones.length;
+            let max = Math.max(...calificaciones);
+            let min = Math.min(...calificaciones);
+            
+            document.getElementById('resultado').innerText = 
+                `Promedio: ${promedio.toFixed(2)} \nCalificación más alta: ${max} \nCalificación más baja: ${min}`;
+        }
+    </script>
+</body>
+</html>
