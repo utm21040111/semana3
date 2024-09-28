@@ -1,7 +1,0 @@
-Saque un préstamo por 30,000 pesos de los cuales debo pagar 384 pesos semanales si me están cobrando el 16% de interés, ¿En cuantas semanas pagaré mi préstamo?
-
-30k
-384 semana
-16% interés 
-
-30k * .16 = 34800 / 384 = 90.6 = 91 semanas
